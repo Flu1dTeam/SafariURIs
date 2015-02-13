@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <title>Safari URI Schemes</title>
+        <style>
+            body {
+            font-family: "Open Sans", "Lato", "Helvetica", sans-serif;
+            margin: 6vmin 12vmin;
+            text-align: center;
+            }
+            h1 {
+            border-bottom: solid #444 1px;
+            font-size: 8vmin;
+            /*font-weight: 400;*/
+            text-align: center;
+            padding: 0 5vmin 2vmin;
+            margin: 0;
+            }
+            #banner {
+            background-color: #ff0;
+            }
+            h4 {
+            border-top: solid #444 1px;
+            font-size: 6vmin;
+            padding-top: 4vmin;
+            }
+            h5 {
+            font-size: 4vmin;
+            margin: 0;
+            text-align: left;
+            }
+            p {
+            text-align: left;
+            }
+            header {
+            background: white;
+            top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Fun with Safari &amp; <abbr title="Uniform Resource Identifier">URI</abbr> schemes</h1>
+        </header>
+        <h2>Click an application's icon to open it!</h2>
+        <h3 id="banner">This won't work well in all browsers; please come back here in Safari for Mac!</h3>
+        <img src="icons/itunes.png" onclick="launch('itunes')" height="128px" width="128px">
+        <img src="icons/ibooks.png" onclick="launch('ibooks')" height="128px" width="128px">
+        <img src="icons/app-store.png" onclick="launch('macappstore')" height="128px" width="128px">
+        <img src="icons/messages.png" onclick="launch('ichat')" height="128px" width="128px">
+        <img src="icons/facetime.png" onclick="launch('facetime')" height="128px" width="128px">
+        <img src="icons/mail.png" onclick="launch('mailto')" height="128px" width="128px">
+        <img src="icons/maps.png" onclick="launch('maps')" height="128px" width="128px">
+        <img src="icons/calendar.png" onclick="launch('ical')" height="128px" width="128px">
+        <img src="icons/reminders.png" onclick="launch('reminders')" height="128px" width="128px">
+        <img src="icons/contacts.png" onclick="launch('addressbook')" height="128px" width="128px">
+        <img src="icons/safari.png" onclick="window.open('favorites:')" height="128px" width="128px">
+        <img src="icons/game-center.png" onclick="launch('gamecenter')" height="128px" width="128px">
+        <img src="icons/preferences.png" onclick="launch('x-apple.systempreferences')" height="128px" width="128px">
+        <img src="icons/iphoto.png" onclick="launch('photo')" height="128px" width="128px">
+        <img src="icons/garageband.png" onclick="launch('gb-install')" height="128px" width="128px">
+        <img src="icons/quicktime.png" onclick="launch('rtsp')" height="128px" width="128px">
+        <img src="icons/finder.png" onclick="launch('nwnode')" height="128px" width="128px">
+        <img src="icons/dictionary.png" onclick="launch('dict')" height="128px" width="128px">
+        <img src="icons/terminal.png" onclick="launch('ssh')" height="128px" width="128px">
+        <img src="icons/airport-utility.png" onclick="launch('apconfig')" height="128px" width="128px">
+        <img src="icons/script-editor.png" onclick="launch('applescript')" height="128px" width="128px">
+        <img src="icons/addprinter.png" onclick="launch('ipp')" height="128px" width="128px">
+        <img src="icons/screen-sharing.png" onclick="launch('vnc')" height="128px" width="128px">
+        <img src="icons/helpviewer.png" onclick="launch('help')" height="128px" width="128px">
+        <img src="icons/feedback-assistant.png" onclick="launch('applefeedback')" height="128px" width="128px">
+        <img src="icons/word.png" onclick="launch('word')" height="128px" width="128px">
+        <img src="icons/excel.png" onclick="launch('excel')" height="128px" width="128px">
+        <img src="icons/powerpoint.png" onclick="launch('powerpoint')" height="128px" width="128px">
+        <img src="icons/firefox.png" onclick="launch('ftp')" height="128px" width="128px">
+        <img src="icons/skype.png" onclick="launch('skype')" height="128px" width="128px">
+        <img src="icons/steam.png" onclick="launch('steam')" height="128px" width="128px">
+        <img src="icons/vlc.png" onclick="launch('udp')" height="128px" width="128px">
+        <img src="icons/twitter.png" onclick="launch('tweetie')" height="128px" width="128px">
+        <img src="icons/github.png" onclick="launch('github-mac')" height="128px" width="128px">
+        <img src="icons/idea.png" onclick="launch('idea')" height="128px" width="128px">
+        <img src="icons/transmission.png" onclick="launch('magnet')" height="128px" width="128px">
+        <img src="icons/splashtop-streamer.png" onclick="launch('st-streamer')" height="128px" width="128px">
+        <img src="icons/fitbit-connect.png" onclick="launch('fitbit-connect://')" height="128px" width="128px">
+        <img src="icons/microsoft-messenger.png" onclick="launch('x-mspresence://')" height="128px" width="128px">
+        <img src="icons/kindle.png" onclick="launch('kindle')" height="128px" width="128px">
+        <img src="icons/spotify.png" onclick="launch('spotify')" height="128px" width="128px">
+        <img src="icons/last-fm.png" onclick="launch('lastfm')" height="128px" width="128px">
+        <br><br>
+        <label>iTunes Controls:</label> <button type="button" onclick="launch('itunes')">Play Next Song</button>
+        <br>
+        <label>Steam Music Controls:</label> <button type="button" onclick="goto('steam://musicplayer/playprevious')">Previous</button>
+        <button type="button" onclick="goto('steam://musicplayer/toggleplaypause')">Play/Pause</button>
+        <button type="button" onclick="goto('steam://musicplayer/playnext')">Next</button>
+        <button type="button" onclick="goto('steam://musicplayer/increasevolume')">Volume Up</button>
+        <button type="button" onclick="goto('steam://musicplayer/decreasevolume')">Volume Down</button>
+        <!-- Note that more than just music can be controlled here! For details, see developer.valvesoftware.com/wiki/Steam_browser_protocol -->
+        <br><br>
+        <button type="button" onclick="repeat('itunes://')" title="You will regret clicking this.">Open Error Messages</button>
+        <button type="button" onclick="safariTabs()" title="You will regret clicking this.">Incapacitate Safari</button>
+        <button type="button" onclick="goto('http://cdn.last.fm/client/Mac/Last.fm-2.1.36.zip'); setTimeout(function(){launch('lastfm')}, 10000)">Download and Open Last.fm</button>
+        <br><br>
+        <label>Enter man page to open: <input type="text" id="command" value="passwd"></label>
+        <button type="submit" onclick="goto('x-man-page://' + document.getElementById('command').value)">Open page</button>
+        <br><br>
+        <b>Note all of these things (except for the Incapacitate Safari button) could be done without your consent.</b>
+        <br>
+        <h4>Q&amp;A</h4>
+        <h5>What is this?</h5>
+        <p>
+            This is a demonstration of how Safari can be too trusting of URIs, and automatically send them to the appropriate application without asking the user. For example, a random website like this one can open your applications.
+        </p>
+        <h5>How bad is this?</h5>
+        <p>
+            Moderately. Some applications assume that websites can't launch their URIs, so they allow access to many of their actions. There is also always the danger that there is a hidden vulnerability in one of these applicaitons that could be remotely exploited. However, this is only possible in Safari, as other browsers will ask you before opening another application.
+        </p>
+        <h5>How can I stop this?</h5>
+        <p>
+            You have two options. You can either switch to <a href="https://google.com/chrome">another</a> <a href="https://firefox.com">browser</a> with better security or <a href="http://www.apple.com/feedback/safari.html">let Apple know</a> you want this fixed.
+        </p>
+        <iframe id="launcher" hidden="hidden"></iframe>
+        <script>
+            var ua = navigator.userAgent.toLowerCase();
+            var banner = document.getElementById("banner");
+            var launcher = document.getElementById("launcher");
+            if(ua.indexOf("safari") != -1 && ua.indexOf("chrome") == -1) {
+                if(ua.indexOf("mobile") != -1) {
+                    banner.innerHTML = "Try this using Safari for Mac, mobile site coming soon!"
+                } else {
+                    launch("itunes");
+                    banner.remove();
+                }
+            }
+            function launch(app) {
+                launcher.src = app + ":";
+                console.log("Opened '" + app + "'.");
+            }
+            function goto(url) {
+                launcher.src = url;
+                console.log("Opened '" + url + "'.")
+            }
+            function repeat(url) {
+                (function() {
+                goto(url);
+                setTimeout(arguments.callee, 100);
+            })();
+            }
+            function safariTabs() {
+                var mywindow;
+                for(var i = 0; i < 10; i++) { // You shouldn't be able to loop onclick events.
+                    mywindow = window.open("favorites://", "", "width=400, height=400"); // Interesting internal URL
+                    mywindow.document.documentElement.webkitRequestFullscreen();
+                }
+            }
+        </script>
+    </body>
+</html>
